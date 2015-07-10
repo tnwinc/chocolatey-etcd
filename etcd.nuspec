@@ -9,12 +9,17 @@
     <authors>CoreOS</authors>
     <owners>Robert Labrie</owners>
     <summary>etcd is a distributed key/value store</summary>
-    <description>This package installs etcd as a service, and makes etcd-ctl.exe available in the path. Edit C:\ProgramData\etcd\etcd.conf to set configuration details.	
+    <description>This package installs etcd as a service, and makes etcd-ctl.exe available in the path. 
+	
+	etcd 2.0 no longer respects the -config parameter, all settings must be passed in on the command line. The package will pass package parameters to the service.
+	Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/tokengoeshere"`
+	
+	The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
     </description>
-    <projectUrl></projectUrl>
+    <projectUrl>https://github.com/coreos/etcd</projectUrl>
     <tags>etcd admin</tags>
     <copyright></copyright>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://github.com/coreos/etcd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/etcd.png</iconUrl>-->
     <dependencies>
