@@ -21,7 +21,7 @@
     <copyright></copyright>
     <licenseUrl>https://github.com/coreos/etcd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/etcd.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/coreos/etcd/master/logos/etcd-glyph-color.png</iconUrl>
     <dependencies>
       <dependency id="nssm" />
     </dependencies>
