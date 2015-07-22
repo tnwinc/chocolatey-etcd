@@ -27,3 +27,4 @@ if (Test-Path C:\ProgramData\etcd\etcdctl) { copy-item C:\ProgramData\etcd\etcdc
 
 Copy-Item C:\ProgramData\etcd\etcdctl.exe $toolsDir -Force
 &nssm install etcd C:\ProgramData\etcd\etcd.exe "$($env:chocolateyPackageParameters)"
+&nssm set etcd Start SERVICE_AUTO_START
