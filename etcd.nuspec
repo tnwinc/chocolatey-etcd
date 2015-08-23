@@ -12,10 +12,10 @@
     <description>
 	etcd is a distributed, consistent key-value store for shared configuration and service discovery, with a focus on being:
 
-    Simple: curl'able user facing API (HTTP+JSON)
-    Secure: optional SSL client cert authentication
-    Fast: benchmarked 1000s of writes/s per instance
-    Reliable: properly distributed using Raft
+    * Simple: curl'able user facing API (HTTP+JSON)
+    * Secure: optional SSL client cert authentication
+    * Fast: benchmarked 1000s of writes/s per instance
+    * Reliable: properly distributed using Raft
 
 	etcd is written in Go and uses the Raft consensus algorithm to manage a highly-available replicated log.
 	This package installs etcd as a service, and makes etcdctl.exe available in the path. 
