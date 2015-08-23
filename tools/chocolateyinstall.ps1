@@ -10,7 +10,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = "C:\ProgramData\etcd"
 
 Install-ChocolateyZipPackage "$packageName" "$url" "$installDir" "$url64"
-
+#check OS bitness
+if (!([Environment]::Is64BitOperatingSystem))
+{
+	Write-Error "etcd requires 64bit operating system"
+	exit
+}
 #remove the service if it exists
 if ((Get-Service | Where-Object { $_.Name -eq "etcd" }).length)
 {
