@@ -25,6 +25,13 @@
 	
 	The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
 
+	Package history:
+	2.1.1
+	* Initial chocolatey package
+	2.1.2
+	* Improved description
+	* Addded test for 64bit OS and Write-Error if none found
+	
 	The github home for this package is: https://github.com/tnwinc/chocolatey-etcd we welcome pull requests!
     </description>
     <projectUrl>https://github.com/coreos/etcd</projectUrl>
