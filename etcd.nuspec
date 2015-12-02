@@ -5,17 +5,33 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>etcd</id>
     <title>etcd (Install)</title>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
     <authors>CoreOS</authors>
     <owners>Robert Labrie</owners>
-    <summary>etcd is a distributed key/value store</summary>
-    <description>This package installs etcd as a service, and makes etcd-ctl.exe available in the path. 
+    <summary>etcd is a distributed, consistent key-value store for shared configuration and service discovery</summary>
+    <description>
+	etcd is a distributed, consistent key-value store for shared configuration and service discovery, with a focus on being:
+
+    * Simple: curl'able user facing API (HTTP+JSON)
+    * Secure: optional SSL client cert authentication
+    * Fast: benchmarked 1000s of writes/s per instance
+    * Reliable: properly distributed using Raft
+
+	etcd is written in Go and uses the Raft consensus algorithm to manage a highly-available replicated log.
+	This package installs etcd as a service, and makes etcdctl.exe available in the path. 
 	
 	etcd 2.0 no longer respects the -config parameter, all settings must be passed in on the command line. The package will pass package parameters to the service.
 	Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/tokengoeshere"`
 	
 	The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
 
+	Package history:
+	2.1.1
+	* Initial chocolatey package
+	2.1.2
+	* Improved description
+	* Addded test for 64bit OS and Write-Error if none found
+	
 	The github home for this package is: https://github.com/tnwinc/chocolatey-etcd we welcome pull requests!
     </description>
     <projectUrl>https://github.com/coreos/etcd</projectUrl>
