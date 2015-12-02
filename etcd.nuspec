@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>etcd</id>
     <title>etcd (Install)</title>
-    <version>2.1.2</version>
+    <version>2.2.2</version>
     <authors>CoreOS</authors>
     <owners>Robert Labrie</owners>
     <summary>etcd is a distributed, consistent key-value store for shared configuration and service discovery</summary>
